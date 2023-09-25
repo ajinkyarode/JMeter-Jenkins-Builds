@@ -4,7 +4,7 @@ pipeline {
         stage('Clone Repo') {
             steps {
                 echo "Cloning Repo..."
-                git 'https://github.com/ajinkyarode/JMeter-Jenkins-Builds.git'
+                //git 'https://github.com/ajinkyarode/JMeter-Jenkins-Builds.git'
             }
         }
         stage('Execute Sanity Test') {
