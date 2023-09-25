@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Execute Sanity Test') {
             steps {
-              bat '''C:\\Users\\ajink\\Downloads\\apache-jmeter-5.6.2\\apache-jmeter-5.6.2\\bin -n -t "Demo1.jmx" -l TestRes.jtl'''
+              bat '''C:\\Users\\ajink\\Downloads\\apache-jmeter-5.6.2\\apache-jmeter-5.6.2\\bin\\jmeter.bat -n -t "Demo1.jmx" -l TestRes.jtl'''
             }
         }
         stage('Execute Load Test') {
