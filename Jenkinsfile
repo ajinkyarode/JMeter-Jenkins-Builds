@@ -4,15 +4,12 @@ pipeline {
         stage('Clone Repo') {
             steps {
                 echo "Cloning Repo..."
-                //git 'https://github.com/ajinkyarode/JMeter-Jenkins-Builds.git'
+                git branch: 'main', credentialsId: '91ddaf27-3c31-43a0-b7cd-39ec5e4a248f', url: 'https://github.com/ajinkyarode/JMeter-Jenkins-Builds.git'
             }
         }
         stage('Execute Sanity Test') {
             steps {
-              bat '''
-                    C:\\Users\\ajink\\Downloads\\apache-jmeter-5.6.2\\apache-jmeter-5.6.2\\bin -j jmeter.save.saveservice.output_format=xml -n -t "Demo1.jmx" -l TestRes.jtl
-
-                  '''
+              bat '''C:\\Users\\ajink\\Downloads\\apache-jmeter-5.6.2\\apache-jmeter-5.6.2\\bin -n -t "Demo1.jmx" -l TestRes.jtl'''
             }
         }
         stage('Execute Load Test') {
