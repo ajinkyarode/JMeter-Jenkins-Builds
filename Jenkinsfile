@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Execute Regression Test') {
             steps {
-              bat '''C:\\Users\\ajink\\Downloads\\apache-jmeter-5.6.2\\apache-jmeter-5.6.2\\bin\\jmeter.bat -j jmeter.save.saveservice.output_format=xml -n -t "Demo5.jmx" -l TestReslt5.jtl'''
+              bat '''C:\\Users\\ajink\\Downloads\\apache-jmeter-5.6.2\\apache-jmeter-5.6.2\\bin\\jmeter.bat -j jmeter.save.saveservice.output_format=xml -n -t "Demo5.jmx" -l **/*.jtl'''
             }
         }
     }
