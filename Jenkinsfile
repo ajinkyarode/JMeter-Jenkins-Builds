@@ -22,5 +22,12 @@ pipeline {
               bat '''C:\\Users\\ajink\\Downloads\\apache-jmeter-5.6.2\\apache-jmeter-5.6.2\\bin\\jmeter.bat -j jmeter.save.saveservice.output_format=xml -n -t "Demo5.jmx" -l '**/*.jtl' '''
             }
         }
+        stage('Publish Test Reports') {
+            steps {
+              perfReport '**/*.jtl'
+            }
+        }
+        
+
     }
 }
