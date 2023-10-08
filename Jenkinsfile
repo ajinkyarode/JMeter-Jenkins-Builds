@@ -27,7 +27,11 @@ pipeline {
               perfReport '**/*.jtl'
             }
         }
-        
+        stage('Test Complete') {
+            steps {
+              echo "Test is completed"
+            }
+        }
 
     }
 }
